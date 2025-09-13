@@ -1,125 +1,151 @@
 /* === Основные стили страницы === */
 body {
-    /* Фон из вашей группы VK! Attachment: fixed создает эффект параллакса при скролле */
-    background-image: url('https://sun9-38.userapi.com/impg/efw-t_F2sYyYI-R_V2xR3O4lRk4-2JBNEACzUQ/SDH-312vPqI.jpg');
-    background-color: #1a1a1a;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
+    /* Тот самый анимированный фон в стиле XMB! */
+    background-image: url('https://i.pinimg.com/originals/b0/f3/7e/b0f37e84232715f3b749cba9f34a174f.gif');
     background-size: cover;
-
+    background-attachment: fixed; /* Фиксируем фон для эффекта глубины */
     font-family: 'Verdana', 'Tahoma', sans-serif;
-    font-size: 14px;
-    color: #3D2B1F; /* Цвет тёмных чернил, а не чисто чёрный */
+    font-size: 13px;
+    color: #f0f0f0; /* Светлый текст для читаемости на тёмном фоне */
     margin: 0;
     padding: 0;
 }
 
 a {
-    color: #D2691E; /* Шоколадный цвет для ссылок */
-    font-weight: bold;
+    color: #66CCFF; /* Нежный голубой для ссылок */
     text-decoration: none;
 }
 a:hover {
-    color: #FF4500; /* Оранжево-красный при наведении */
+    color: #ffffff;
     text-decoration: underline;
 }
 
 #container {
     width: 850px;
     margin: 20px auto;
-    /* Текстура пергамента для основного блока */
-    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
-    background-color: #F5DEB3; /* Цвет пшеницы/пергамента */
-    border: 5px double #5C4033; /* Двойная рамка, как у книги */
-    box-shadow: 0px 0px 20px #000;
+    /* Полупрозрачный тёмно-синий фон, как в интерфейсах того времени */
+    background-color: rgba(25, 25, 51, 0.85);
+    border: 1px solid #66CCFF;
+    border-radius: 10px; /* Скругляем углы, как у самой PSP */
+    box-shadow: 0px 0px 20px rgba(102, 204, 255, 0.5); /* Голубое свечение */
+    backdrop-filter: blur(5px); /* Эффект "матового стекла" для современных браузеров */
 }
 
 /* === Стили для шапки === */
 #header {
     text-align: center;
-    padding: 10px;
-    border-bottom: 3px solid #8B4513;
-    background-color: rgba(0,0,0,0.1); /* Легкое затемнение для читаемости */
+    padding: 20px;
 }
 
 #header h1 {
-    font-family: 'Press Start 2P', cursive; /* Ретро-игровой шрифт для главного заголовка */
-    color: #5C4033;
-    text-shadow: 1px 1px #E4D5B7;
-    font-size: 24px;
+    font-family: 'Poppins', sans-serif; /* Чистый и современный шрифт */
+    color: #ffffff;
+    text-shadow: 0 0 10px #66CCFF;
+    font-size: 36px;
     margin: 0;
+    letter-spacing: 1px;
 }
 
 #header h2 {
-    color: #6B4423;
+    color: #cccccc;
     font-size: 14px;
-    font-style: italic;
+    font-style: normal;
     margin: 5px 0 0 0;
 }
 
 /* === Структура основного блока === */
-#main-body { padding: 10px; overflow: hidden; }
-#left-sidebar { float: left; width: 180px; }
-#right-sidebar { float: right; width: 180px; }
-#content { float: left; width: 450px; margin: 0 10px; }
+#main-body {
+    padding: 10px 20px;
+    overflow: hidden;
+}
+
+#left-sidebar, #right-sidebar { float: left; width: 180px; }
+#right-sidebar { float: right; }
+#content { float: left; width: 410px; margin: 0 20px; }
 
 /* === Стили для блоков в сайдбарах === */
 .sidebar-box {
-    background-color: rgba(139, 69, 19, 0.05); /* Прозрачный коричневатый */
-    border: 1px solid #D2B48C; /* Цвет загара */
+    background-color: rgba(102, 204, 255, 0.1);
+    border: 1px solid #4a4a6a;
+    border-radius: 5px;
     margin-bottom: 15px;
 }
 .sidebar-box h4 {
-    background-color: #8B4513; /* Цвет седла */
-    font-family: 'IM Fell English SC', serif; /* Тематический "книжный" шрифт */
-    color: #F5DEB3;
+    background-color: transparent;
+    color: #66CCFF;
     font-size: 16px;
     margin: 0;
-    padding: 5px 10px;
-    border-bottom: 2px outset #D2B48C;
+    padding: 10px;
+    border-bottom: 1px solid #4a4a6a;
 }
-.sidebar-content { padding: 10px; font-size: 13px; line-height: 1.5; }
-.sidebar-box ul { list-style: none; margin: 0; padding: 10px; }
-.sidebar-box ul li a { display: block; padding: 3px 0; }
-.sidebar-box form { padding: 10px; font-size: 12px; }
-.poll-button { background-color: #8B4513; border: 2px outset #D2B48C; color: #F5DEB3; cursor: pointer; }
-.poll-button:active { border-style: inset; }
-.ad-box { padding: 10px; text-align: center; }
-
-/* === Стили контента (Записей в дневнике) === */
-.post {
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px dashed #D2B48C;
-    margin-bottom: 20px;
+.sidebar-box ul, .sidebar-box ol {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
 }
-.post h3 {
-    font-family: 'IM Fell English SC', serif; /* Тот же книжный шрифт для заголовков записей */
-    color: #8B4513;
-    font-size: 22px;
-    margin-top: 0;
-    border-bottom: 1px solid #D2B48C;
+.sidebar-box ul li a {
+    display: block;
+    padding: 4px 0;
+}
+.top-list li {
     padding-bottom: 5px;
+    border-bottom: 1px dotted #4a4a6a;
+    margin-bottom: 5px;
+}
+.sidebar-box form { padding: 10px; font-size: 12px; }
+.poll-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #66CCFF;
+    border: none;
+    border-radius: 3px;
+    color: #191933;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* === Стили контента === */
+.post {
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.post h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 5px;
 }
 .new-post {
-    background-color: #D2691E;
-    color: #fff;
-    padding: 2px 6px;
+    background-color: #66CCFF;
+    color: #191933;
+    padding: 3px 6px;
     font-size: 12px;
     font-weight: bold;
-    border: 1px solid #fff;
+    border-radius: 3px;
+    text-shadow: none;
 }
+@keyframes blink { 50% { opacity: 0; } } /* Анимацию мигания можно убрать, если хочется еще чище */
 
-.post .meta { font-size: 11px; color: #6B4423; font-style: italic; }
-.post-image { max-width: 100%; border: 4px solid #D2B48C; margin: 10px 0; padding: 2px; background: #fff; }
-.rating { font-weight: bold; color: #3D2B1F; font-style: italic; }
-
+.post .meta {
+    font-size: 11px;
+    color: #9999aa;
+}
+.post-image {
+    max-width: 100%;
+    border: 1px solid #4a4a6a;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.rating {
+    font-weight: bold;
+    color: #66CCFF;
+}
 .divider {
     border: 0;
     height: 1px;
-    background-color: #D2B48C;
-    margin: 20px 0;
+    background-color: #4a4a6a;
 }
 
 /* === Подвал сайта === */
@@ -127,8 +153,7 @@ a:hover {
     text-align: center;
     padding: 15px;
     font-size: 12px;
-    color: #6B4423;
-    border-top: 3px solid #8B4513;
-    background-color: rgba(0,0,0,0.1);
+    color: #9999aa;
+    border-top: 1px solid #4a4a6a;
+    margin-top: 10px;
 }
-#footer img { margin: 5px; }
