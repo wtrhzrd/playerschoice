@@ -1,194 +1,134 @@
 /* === Основные стили страницы === */
 body {
+    /* Фон из вашей группы VK! Attachment: fixed создает эффект параллакса при скролле */
+    background-image: url('https://sun9-38.userapi.com/impg/efw-t_F2sYyYI-R_V2xR3O4lRk4-2JBNEACzUQ/SDH-312vPqI.jpg');
     background-color: #1a1a1a;
-    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+
     font-family: 'Verdana', 'Tahoma', sans-serif;
-    font-size: 13px;
-    color: #cccccc;
+    font-size: 14px;
+    color: #3D2B1F; /* Цвет тёмных чернил, а не чисто чёрный */
     margin: 0;
     padding: 0;
 }
 
 a {
-    color: #00ccff;
+    color: #D2691E; /* Шоколадный цвет для ссылок */
+    font-weight: bold;
     text-decoration: none;
 }
 a:hover {
-    color: #ffffff;
+    color: #FF4500; /* Оранжево-красный при наведении */
     text-decoration: underline;
 }
 
 #container {
-    width: 850px; /* Немного расширим контейнер для 3 колонок */
+    width: 850px;
     margin: 20px auto;
-    border: 3px outset #555555;
-    background-color: #2a2a2a;
-    box-shadow: 0px 0px 15px #000;
+    /* Текстура пергамента для основного блока */
+    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+    background-color: #F5DEB3; /* Цвет пшеницы/пергамента */
+    border: 5px double #5C4033; /* Двойная рамка, как у книги */
+    box-shadow: 0px 0px 20px #000;
 }
 
 /* === Стили для шапки === */
 #header {
-    background-color: #111;
-    border-bottom: 3px inset #555555;
     text-align: center;
     padding: 10px;
-    background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png');
+    border-bottom: 3px solid #8B4513;
+    background-color: rgba(0,0,0,0.1); /* Легкое затемнение для читаемости */
 }
 
 #header h1 {
-    font-family: 'Press Start 2P', cursive;
-    color: #00ff00;
-    text-shadow: 3px 3px #ff0000;
-    font-size: 36px;
+    font-family: 'Press Start 2P', cursive; /* Ретро-игровой шрифт для главного заголовка */
+    color: #5C4033;
+    text-shadow: 1px 1px #E4D5B7;
+    font-size: 24px;
     margin: 0;
 }
 
 #header h2 {
-    color: #ffff00;
+    color: #6B4423;
     font-size: 14px;
     font-style: italic;
     margin: 5px 0 0 0;
-    letter-spacing: 1px;
 }
 
 /* === Структура основного блока === */
-#main-body {
-    padding: 10px;
-    overflow: hidden; /* Важно для корректной работы float */
-}
-
-/* === Левая колонка === */
-#left-sidebar {
-    float: left;
-    width: 180px;
-}
-
-/* === Правая колонка === */
-#right-sidebar {
-    float: right;
-    width: 180px;
-}
-
-/* === Центральный контент === */
-#content {
-    float: left;
-    width: 450px; /* Ширина контента = общая - левая - правая */
-    margin: 0 10px;
-}
+#main-body { padding: 10px; overflow: hidden; }
+#left-sidebar { float: left; width: 180px; }
+#right-sidebar { float: right; width: 180px; }
+#content { float: left; width: 450px; margin: 0 10px; }
 
 /* === Стили для блоков в сайдбарах === */
 .sidebar-box {
-    background-color: #1e1e1e;
-    border: 1px solid #444;
+    background-color: rgba(139, 69, 19, 0.05); /* Прозрачный коричневатый */
+    border: 1px solid #D2B48C; /* Цвет загара */
     margin-bottom: 15px;
 }
 .sidebar-box h4 {
-    background-color: #333;
-    color: #ff9900;
-    font-size: 14px;
+    background-color: #8B4513; /* Цвет седла */
+    font-family: 'IM Fell English SC', serif; /* Тематический "книжный" шрифт */
+    color: #F5DEB3;
+    font-size: 16px;
     margin: 0;
-    padding: 5px;
-    border-bottom: 2px outset #555;
-    display: flex;
-    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 2px outset #D2B48C;
 }
-.sidebar-box h4 img {
-    margin-right: 5px; /* отступ для гифок-иконок */
-}
+.sidebar-content { padding: 10px; font-size: 13px; line-height: 1.5; }
+.sidebar-box ul { list-style: none; margin: 0; padding: 10px; }
+.sidebar-box ul li a { display: block; padding: 3px 0; }
+.sidebar-box form { padding: 10px; font-size: 12px; }
+.poll-button { background-color: #8B4513; border: 2px outset #D2B48C; color: #F5DEB3; cursor: pointer; }
+.poll-button:active { border-style: inset; }
+.ad-box { padding: 10px; text-align: center; }
 
-.sidebar-box ul, .sidebar-box ol {
-    list-style: none;
-    margin: 0;
-    padding: 10px;
-}
-.sidebar-box ul li a {
-    display: block;
-    padding: 3px 0;
-}
-.top-list li {
-    padding-bottom: 5px;
-    border-bottom: 1px dotted #444;
-    margin-bottom: 5px;
-}
-
-.sidebar-box form {
-    padding: 10px;
-    font-size: 12px;
-}
-.sidebar-box form p {
-    margin: 0 0 5px 0;
-    font-weight: bold;
-}
-.poll-button {
-    margin-top: 10px;
-    padding: 3px 8px;
-    background-color: #555;
-    border: 2px outset #777;
-    color: #fff;
-    font-weight: bold;
-    cursor: pointer;
-}
-.poll-button:active {
-    border-style: inset;
-}
-.ad-box {
-    text-align: center;
-    padding: 10px;
-}
-
-/* === Стили контента === */
+/* === Стили контента (Записей в дневнике) === */
 .post {
-    margin-bottom: 20px;
-    background-color: #222;
     padding: 15px;
-    border: 1px solid #444;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px dashed #D2B48C;
+    margin-bottom: 20px;
 }
-
 .post h3 {
-    color: #ff9900;
-    font-size: 18px;
+    font-family: 'IM Fell English SC', serif; /* Тот же книжный шрифт для заголовков записей */
+    color: #8B4513;
+    font-size: 22px;
     margin-top: 0;
-    border-bottom: 1px dashed #555;
+    border-bottom: 1px solid #D2B48C;
     padding-bottom: 5px;
 }
 .new-post {
-    background-color: #ff0000;
+    background-color: #D2691E;
     color: #fff;
-    padding: 2px 5px;
+    padding: 2px 6px;
     font-size: 12px;
     font-weight: bold;
     border: 1px solid #fff;
-    animation: blink 1s infinite;
 }
-@keyframes blink { 50% { opacity: 0; } }
 
-.post .meta {
-    font-size: 11px;
-    color: #888888;
-    font-style: italic;
-}
-.post-image {
-    max-width: 100%;
-    border: 2px solid #555555;
-    margin: 10px 0;
-}
-.rating {
-    font-weight: bold;
-    color: #00ff00;
-}
+.post .meta { font-size: 11px; color: #6B4423; font-style: italic; }
+.post-image { max-width: 100%; border: 4px solid #D2B48C; margin: 10px 0; padding: 2px; background: #fff; }
+.rating { font-weight: bold; color: #3D2B1F; font-style: italic; }
+
 .divider {
     border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 255, 0, 0.75), rgba(0, 0, 0, 0));
+    height: 1px;
+    background-color: #D2B48C;
+    margin: 20px 0;
 }
 
 /* === Подвал сайта === */
 #footer {
-    background-color: #111;
-    border-top: 3px inset #555555;
     text-align: center;
     padding: 15px;
     font-size: 12px;
-    color: #777;
+    color: #6B4423;
+    border-top: 3px solid #8B4513;
+    background-color: rgba(0,0,0,0.1);
 }
 #footer img { margin: 5px; }
